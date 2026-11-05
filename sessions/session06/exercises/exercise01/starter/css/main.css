@@ -37,7 +37,7 @@ body {
 .item-4 {
   grid-column: 3;
   grid-row: 2;
-
+  align-self: end;
 }
 
 .item-5 {
