@@ -1,15 +1,49 @@
-* {
-  box-sizing: border-box;
+/* El reset es carrega abans d'aquest full. */
+
+/* Variables */
+:root {
+  --color-item: lightsalmon;
+  --color-sub-item: rgb(253, 213, 197);
 }
-h1 {
-  font-size: 1.5em;
+
+/* Layout */
+body {
+  font-family: "Times New Roman", serif;
+  line-height: 1;
+}
+
+.grid-container-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 100px), 1fr));
+  gap: 1rem;
+}
+
+/* Components */
+h1,
+h2 {
+  font-size: 1.5rem;
   font-weight: bold;
 }
+
 .grid-item {
-  background-color: lightsalmon;
+  background-color: var(--color-item);
   padding: 3rem;
+  min-width: 0;
 }
+
 .sub-item {
-  background-color: rgb(253, 213, 197);
+  background-color: var(--color-sub-item);
   padding: 1rem;
+  text-align: center;
 }
+
+@media (max-width: 600px) {
+  .grid-item {
+    padding: 1rem;
+  }
+
+  .sub-item {
+    padding: 1rem 0.25rem;
+  }
+}
+
