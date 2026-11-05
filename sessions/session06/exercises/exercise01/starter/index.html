@@ -1,20 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ca">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Exercise</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/main.css">
+    <title>Exercici 1 - CSS Grid</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
-    <div class="grid-container">
-      <div class="grid-item item-1"><h1>Item 1</h1></div>
-      <div class="grid-item item-2"><h1>Item 2</h1></div>
-      <div class="grid-item item-3">
-        <h1>Item 3</h1>
+    <main class="grid-container">
+      <header class="grid-item item-1"><h1>Item 1</h1></header>
+      <aside class="grid-item item-2"><h2>Item 2</h2></aside>
+      <section class="grid-item item-3" aria-labelledby="titol-item-3">
+        <h2 id="titol-item-3">Item 3</h2>
         <div class="grid-container-2">
           <div class="sub-item"><p>Sub-item1</p></div>
           <div class="sub-item"><p>Sub-item2</p></div>
@@ -22,9 +20,9 @@
           <div class="sub-item"><p>Sub-item4</p></div>
           <div class="sub-item"><p>Sub-item5</p></div>
         </div>
-      </div>
-      <div class="grid-item item-4"><h1>Item 4</h1></div>
-      <div class="grid-item item-5"><h1>Item 5</h1></div>
-    </div>
+      </section>
+      <aside class="grid-item item-4"><h2>Item 4</h2></aside>
+      <footer class="grid-item item-5"><h2>Item 5</h2></footer>
+    </main>
   </body>
 </html>
