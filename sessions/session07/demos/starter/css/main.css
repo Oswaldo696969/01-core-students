@@ -1,90 +1,108 @@
-:root {
-  --primary-color: #abadf8;
-  --second-color: #444563;
-  --third-color: #f6f6fe;
-  --fourth-color: #e5e6fc;
-  --fifth-color: #888ac6;
-}
-
 * {
   box-sizing: border-box;
 }
 
 body {
+  margin: 0;
+  padding: 20px;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: var(--fourth-color);
-}
-
-header {
-  background-color: var(--primary-color);
-  background: var(--primary-color);
-  background: radial-gradient(circle, var(--primary-color) 60%, var(--second-color) 100%);
-  margin-bottom: 3rem;
-}
-h1 {
-  font-size: 3rem;
-  font-weight: bold;
-  padding: 2rem;
-  text-align: center;
-  color: var(--third-color);
+  background-color: #e5e6fc;
+  color: #333;
 }
 
 main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-form {
-  border: 2px solid var(--second-color);
-  border-radius: 4px;
-  padding: 2.5rem;
-  background-color: var(--third-color);
-}
-.form-group {
-  padding: 0.5rem;
-  margin-bottom: 0.4rem;
-}
-input, textarea {
-  border: 1px solid var(--second-color);
-  border-radius: 4px;
-  color: var(--second-color);
-}
-input:not(input[type="radio"], input[type="checkbox"]), textarea, select {
   width: 100%;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
+  max-width: 600px;
+  margin: 0 auto;
 }
-/* input:focus {
-  border-color: var(--primary-color);
-} */
+
+h1 {
+  text-align: center;
+  color: #444563;
+}
+
+form, .normas {
+  padding: 24px;
+  background-color: #f6f6fe;
+  border: 1px solid #888ac6;
+  border-radius: 10px;
+}
+
+fieldset {
+  min-width: 0;
+  margin: 0 0 20px;
+  padding: 15px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+}
+
+legend {
+  padding: 0 5px;
+  font-weight: bold;
+}
 
 label {
   display: block;
-  margin-bottom: 0.35rem;
-  font-size: 1.1rem;
-}
-.inline {
-  display: inline;
-}
-.btn {
-  width: 50%;
-  height: 2.5rem;
-  margin: 0 auto;
-  margin-top: 2rem;
-  display: block;
-  font-size: 1.25rem;
-  border: 1px solid var(--second-color);
-  border-radius: 8px;
-  background-color: var(--fifth-color);
-  color: var(--third-color);
-  cursor: pointer;
-}
-.btn:hover {
-  background-color: var(--primary-color);
+  margin-bottom: 6px;
 }
 
-/* Per marcar tots els camps obligatoris igual */
-.is-required::after {
-  content: '*';
-  color: red;
+input:not([type="radio"]):not([type="checkbox"]), select, textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 9px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  background-color: white;
+  font: inherit;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: 2px solid #7779bd;
+  outline-offset: 2px;
+  background-color: #f0f0ff;
+}
+
+.opcion {
+  display: inline-block;
+  margin: 5px 10px 5px 0;
+}
+
+a {
+  color: #444579;
+}
+
+button {
+  padding: 10px 15px;
+  margin: 5px 5px 5px 0;
+  border: 1px solid #444563;
+  border-radius: 6px;
+  background-color: #7779bd;
+  color: white;
+  font: inherit;
+  cursor: pointer;
+}
+
+button[type="reset"] {
+  background-color: #555;
+}
+
+button:hover {
+  background-color: #444563;
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 12px;
+  }
+  form, .normas {
+    padding: 14px;
+  }
+  button {
+    width: 100%;
+  }
 }
